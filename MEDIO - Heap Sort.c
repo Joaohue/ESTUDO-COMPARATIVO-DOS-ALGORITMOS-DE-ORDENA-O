@@ -59,7 +59,7 @@ void printArray(int arr[], int n) {
     printf("\n");
 }
 
-int main() {
+int main(int argc, char *argv[]) {
 	int i;
     int n = 1000; // Tamanho do array
 
