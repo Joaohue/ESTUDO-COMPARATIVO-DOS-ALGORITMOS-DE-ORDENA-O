@@ -47,7 +47,7 @@ void printArray(int arr[], int n) {
     printf("\n");
 }
 
-int main() {
+int main(int argc, char *argv[]) {
     int i;
     // Tamanho do array aqui que irá trocar para tamanhos de 10^3 / 10^4 / 10^5
     int tamanho = 1000;
