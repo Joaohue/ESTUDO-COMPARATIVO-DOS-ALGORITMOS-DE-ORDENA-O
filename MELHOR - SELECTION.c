@@ -24,6 +24,7 @@ void selectionSort(int arr[], int n, Estatisticas *stats) {
             }
         }
 
+        
         if (min_idx != i) {
             int temp = arr[min_idx];
             arr[min_idx] = arr[i];
@@ -46,23 +47,21 @@ void printArray(int arr[], int n) {
     printf("\n");
 }
 
-int main(int argc, char *argv[]) {
+int main() {
     int i;
-    // Tamanho do array aqui que ir· trocar para tamanhos de 10^3 / 10^4 / 10^5
+    // Tamanho do array aqui que ir√° trocar para tamanhos de 10^3 / 10^4 / 10^5
     int tamanho = 1000;
 
- 
-    int arr[tamanho];
-
     
+    int arr[tamanho];
     for (i = 0; i < tamanho; i++) {
-        arr[i] = rand(); 
+        arr[i] = i;  
     }
 
-    printf("Array original (tamanho %d): \n", tamanho);
+    printf("Array original: \n", tamanho);
     printArray(arr, tamanho);
 
-   
+    
     Estatisticas stats;
 
     selectionSort(arr, tamanho, &stats);
@@ -70,7 +69,7 @@ int main(int argc, char *argv[]) {
     printf("Array ordenado: \n");
     printArray(arr, tamanho);
 
-    // Imprime estatÌsticas
+    // Imprime estat√≠sticas
     printf("Estatisticas:\n");
     printf("Tempo de Execucao: %ld ms\n", stats.tempoExecucao);
     printf("Quantidade de Trocas: %ld\n", stats.trocas);
@@ -78,4 +77,3 @@ int main(int argc, char *argv[]) {
 
     return 0;
 }
-
